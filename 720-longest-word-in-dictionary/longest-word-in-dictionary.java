@@ -1,6 +1,7 @@
 class Solution {
     public String longestWord(String[] words) {
-        List<String> list = new ArrayList<>();
+        // List<String> list = new ArrayList<>();
+        HashSet<String> list = new HashSet<>();
         Arrays.sort(words);
         for( int i = 0 ;i < words.length ; i++)list.add(words[i]);
         String ans ="";
