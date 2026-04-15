@@ -8,12 +8,12 @@ class Solution {
         while(pq.size()!=k)pq.poll();
         int ans_itr = 0;
         for( int i = 0 ; i  < nums.length ; i++){
-            if(ans_itr == k)return ans;
             if(pq.contains(nums[i])){
                 ans[ans_itr++]=nums[i];
                 pq.remove(nums[i]);
                 
             }
+            if(ans_itr == k)return ans;
         }
         return ans;
         
