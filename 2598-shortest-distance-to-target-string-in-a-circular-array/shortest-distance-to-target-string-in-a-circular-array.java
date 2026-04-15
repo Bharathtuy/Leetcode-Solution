@@ -10,13 +10,14 @@ class Solution {
             if ( in > 2*words.length)break;
         in++;    
         }
+        if(ans==-1)return -1;
         in = startIndex;
         while(true){
             if(words[(in+words.length)%words.length].equals(target)){
                 ans = Math.min(ans,startIndex-in);
                 break;
             }
-            if(ans == -1)break;
+            // if(ans == -1)break;
             in--;
         }
         return ans;
