@@ -7,7 +7,7 @@ class Solution {
                 ans = in-startIndex;
                 break;
             }
-            if ( in > 2*words.length)break;
+            if ( in > startIndex+words.length)break;
         in++;    
         }
         if(ans==-1)return -1;
