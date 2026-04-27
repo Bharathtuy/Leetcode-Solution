@@ -2,7 +2,6 @@ class Solution {
     public int[] kWeakestRows(int[][] mat, int k) {
         List<Integer> l  = new ArrayList<>();
         HashMap<Integer,Integer> map = new HashMap<>();
-
         for ( int i = 0 ; i < mat.length; i++){
             int count = 0 ;
             for( int j = 0 ; j < mat[0].length ; j++){
@@ -10,8 +9,6 @@ class Solution {
             }
             map.put(i,count);
             l.add(count);
-
-
         }
         Collections.sort(l);
         int ans[] = new int[k];
@@ -27,6 +24,5 @@ class Solution {
             }
         }
         return ans;
-
     }
 }
