@@ -10,26 +10,16 @@ class Solution {
         int mid = t.size()/2;
         int ans = 0 ;
         for( int i = 0 ; i < t.size() ; i++){
-            if ( i == mid){
+            if ( i == mid)
                 continue;
-            }
-            if ( i < mid ){
-                int diff = t.get(mid)-t.get(i);
-                if ( diff % x == 0 ){
-                    ans+=diff/x;
-                }
-                else return -1;
-            }
-            else{
-                int diff = t.get(i)-t.get(mid);
-                if ( diff % x == 0 ){
-                    ans+=diff/x;
-                }
-                else return -1;
-            }
-        }
 
+            int diff =Math.abs(t.get(i)-t.get(mid));
+            if ( diff % x == 0 ){
+                 ans+=diff/x;
+            }
+            else return -1;
+            
+        }
         return ans;
-        
     }
 }
