@@ -21,11 +21,9 @@ class Solution {
             else
             map2.put(indices[i],sources[i]);
         }
-        System.out.println(map);
         for ( int i = 0; i <s.length() ;i++ ){
             if ( map.containsKey(i)){
                 res = res+map.get(i);
-                System.out.println(map2.get(i).length());
                 i += map2.get(i).length()-1;
             }
             else{
