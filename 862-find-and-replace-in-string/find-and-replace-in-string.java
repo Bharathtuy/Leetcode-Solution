@@ -3,16 +3,12 @@ class Solution {
 
         HashMap<Integer,String> map = new HashMap<>();
         HashMap<Integer,String> map2 = new HashMap<>();
-
-        
         String res = "";
-        
         for( int i = 0 ; i < indices.length ;i++ ){
             if((indices[i]+sources[i].length()  ) > s.length()){
                 break;
             }
             if ( s.substring(indices[i],indices[i]+sources[i].length()).equals(sources[i])){
-                // res = res+targets[i];
                 System.out.println(s.substring(indices[i],indices[i]+sources[i].length()));
                 map.put(indices[i],targets[i]);
             }
@@ -21,9 +17,7 @@ class Solution {
             }
         }
         for( int i = 0 ; i < indices.length ; i++){
-            if (sources[i].equals("null")){
-
-            }
+            if (sources[i].equals("null")){}
             else
             map2.put(indices[i],sources[i]);
         }
